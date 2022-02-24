@@ -3,13 +3,14 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import "assets/css/App.css";
 import { IndexPage } from "pages/index";
-import { Sidebar } from "layouts/sidebar";
+import AppLayout from "layouts/AppLayout";
 
 function App() {
   return (
     <Router>
-      <Sidebar />
-      <Route exact path="/" component={IndexPage} />
+      <AppLayout>
+        <Route exact path="/" component={IndexPage} />
+      </AppLayout>
     </Router>
   );
 }
