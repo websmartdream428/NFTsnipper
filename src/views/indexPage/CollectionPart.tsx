@@ -63,6 +63,7 @@ const CollectionWrapper = styled.div`
 `;
 
 const CollectionTable = styled.table`
+  margin-top: 30px;
   border-collapse: collapse;
   table-layout: auto;
   width: 100%;
@@ -79,6 +80,7 @@ const CollectionTable = styled.table`
     font-size: 0.75rem;
     line-height: 1rem;
     color: #999ba6;
+    cursor: pointer;
   }
   td {
     padding: 12px 24px 12px 1px;

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { AppFooter } from "./footer";
 import { Sidebar } from "./sidebar";
 
 export const AppWrapper = styled.div``;
@@ -11,7 +12,10 @@ const AppLayout = ({ children }: any) => {
   return (
     <AppWrapper>
       <Sidebar />
-      <AppContainer>{children}</AppContainer>
+      <AppContainer>
+        {children}
+        <AppFooter />
+      </AppContainer>
     </AppWrapper>
   );
 };
