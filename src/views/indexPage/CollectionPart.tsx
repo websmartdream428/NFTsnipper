@@ -5,6 +5,7 @@ import styled from "styled-components";
 import MintImg1 from "assets/image/mint1.jpg";
 import ProtocolSvg from "assets/image/near-protocol-logo.svg";
 import TableBadge from "components/TableBadge";
+import { CollectionTableData } from "utils/data";
 
 const CollectionPart = () => {
   return (
@@ -29,34 +30,44 @@ const CollectionPart = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>
-              <div className="collection-td">
-                <img src={MintImg1} alt="MintImg1" />
-                <div>
-                  <h2>Antisocial Ape Club</h2>
-                  <p>
-                    <span>Supply: </span>3333
-                  </p>
+          {CollectionTableData.map((item: any, key: any) => (
+            <tr>
+              <td>{key + 1}</td>
+              <td>
+                {" "}
+                <div className="collection-td">
+                  <img src={item.img} alt={item.img} />
+                  <div>
+                    <h2>{item.title}</h2>
+                    <p>
+                      <span>Supply: </span>
+                      {item.count}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </td>
-            <td>
-              <div className="price-td">
-                <img src={ProtocolSvg} alt="ProtocolSvg" />
-                11.50
-              </div>
-            </td>
-            <td>1222</td>
-            <td>
-              55<span className="highlight-text danger">{"(-13)"}</span>
-            </td>
-            <td>
-              $12,321<span className="highlight-text success">{"(+36%)"}</span>
-            </td>
-            <td>$852,321</td>
-          </tr>
+              </td>
+              <td>
+                <div className="price-td">
+                  <img src={ProtocolSvg} alt="ProtocolSvg" />
+                  {item.price}
+                </div>
+              </td>
+              <td>{item.owner}</td>
+              <td>
+                {item.sales.count}
+                <span className={`highlight-text ${item.sales.type}`}>
+                  {`(${item.sales.revenue})`}
+                </span>
+              </td>
+              <td>
+                {item.volume.cost}
+                <span
+                  className={`highlight-text ${item.volume.type}`}
+                >{`(${item.volume.revenue})`}</span>
+              </td>
+              <td>{item.marketCap}</td>
+            </tr>
+          ))}
         </tbody>
       </CollectionTable>
     </CollectionWrapper>
