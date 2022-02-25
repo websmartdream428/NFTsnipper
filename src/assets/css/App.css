@@ -16,3 +16,9 @@ body {
   height: 4px;
   width: 4px;
 }
+
+h1,
+h2,
+p {
+  margin: 0;
+}

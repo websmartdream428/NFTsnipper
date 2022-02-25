@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
+import searchIcon from "assets/image/search.svg";
+
 const InputWrapper = styled.div`
+  position: relative;
   width: -webkit-fill-available;
   input {
     width: -webkit-fill-available;
@@ -17,12 +20,19 @@ const InputWrapper = styled.div`
       border: 2px solid rgba(59, 130, 246);
     }
   }
+  img {
+    position: absolute;
+
+    top: 25%;
+    right: 15px;
+  }
 `;
 
-const FormInput = () => {
+const FormInput = (props: any) => {
   return (
     <InputWrapper>
-      <input type="text" placeholder="Search for collections and NFTs" />
+      <input type="text" placeholder={props.placeholder} />
+      {props.icon && <img src={searchIcon} alt="icon" />}
     </InputWrapper>
   );
 };

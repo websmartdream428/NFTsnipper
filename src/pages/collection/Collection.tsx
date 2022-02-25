@@ -1,6 +1,9 @@
 import React from "react";
-import { ItemInfoCard } from "views/collectionPage";
-import MarketPlacePart from "views/collectionPage/MarketPlacePart";
+import {
+  ItemInfoCard,
+  MarketPlacePart,
+  FilterPart,
+} from "views/collectionPage";
 import { CollectionWrapper } from "./Collection.styles";
 
 const CollectionPage = () => {
@@ -8,6 +11,7 @@ const CollectionPage = () => {
     <CollectionWrapper>
       <ItemInfoCard />
       <MarketPlacePart />
+      <FilterPart />
     </CollectionWrapper>
   );
 };

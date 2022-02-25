@@ -12,7 +12,7 @@ const Header = () => {
     <>
       <HeaderWrapper>
         <FormWrapper>
-          <FormInput />
+          <FormInput placeholder="Search for collections and NFTs" />
         </FormWrapper>
         <StatBar>
           <StatWrapper>

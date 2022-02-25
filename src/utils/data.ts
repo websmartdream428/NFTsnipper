@@ -71,3 +71,11 @@ export const CollectionTableData = [
     marketCap: "$2,563,331",
   },
 ];
+
+export const FilterCardData = [
+  { img: MintImg1, rank: 3, no: 257 },
+  { img: MintImg2, rank: 4, no: 322 },
+  { img: MintImg3, rank: 5, no: 355 },
+  { img: MintImg4, rank: 6, no: 631 },
+  { img: MintImg1, rank: 7, no: 676 },
+];

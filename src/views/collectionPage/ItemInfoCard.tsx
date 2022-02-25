@@ -143,6 +143,7 @@ const DetailItem = styled.div`
 const SocialLinkGroup = styled.div`
   display: flex;
   align-items: center;
+  margin-top: 20px;
   p {
     padding: 0 12px;
     background-color: #121217;
