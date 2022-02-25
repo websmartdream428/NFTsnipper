@@ -50,11 +50,13 @@ export const SideMenuWrapper = styled.div`
   }
 `;
 
-export const MenuItem = styled.div<{ active?: boolean }>`
+export const MenuItem = styled.a<{ active?: boolean }>`
+  display: block;
   cursor: pointer;
   :hover {
     color: #d77e7e80;
   }
+  text-decoration: none;
   transition: all 0.3s;
   text-transform: uppercase;
   font-size: 1rem;

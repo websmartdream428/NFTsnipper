@@ -20,9 +20,11 @@ const Sidebar = ({ active, onCancel }: any) => {
         </span>
         <LogoImg />
         <SideMenuWrapper>
-          <MenuItem active={true}>{"Home"}</MenuItem>
-          <MenuItem>{"Upcoming drops"}</MenuItem>
-          <MenuItem>{"Services & ADS"}</MenuItem>
+          <MenuItem active={true} href="https://google.com">
+            {"Home"}
+          </MenuItem>
+          <MenuItem href="https://google.com">{"Upcoming drops"}</MenuItem>
+          <MenuItem href="https://google.com">{"Services & ADS"}</MenuItem>
         </SideMenuWrapper>
         <SidebarButtonGroup>
           <Button label="submit collection" fColor="#2a2d3e" />
