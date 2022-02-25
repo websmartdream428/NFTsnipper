@@ -11,6 +11,9 @@ const TitleWrapper = styled.h2`
   img {
     margin-right: 10px;
   }
+  @media screen and (max-width: 768px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const PageTitle = ({ children }: any) => {

@@ -39,6 +39,9 @@ const HeaderWrapper = styled.div`
     align-items: center;
   }
   .date-display {
+    & > p {
+      margin: 0;
+    }
     display: flex;
     align-items: center;
     margin-top: 2.5rem;
@@ -67,6 +70,7 @@ const HeaderWrapper = styled.div`
 `;
 
 const FilterWrapper = styled.div`
+  contain: content;
   border-radius: 0.375rem;
   border: 1px solid #2a2d3e;
   display: flex;
