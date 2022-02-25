@@ -34,6 +34,9 @@ export default FeaturedPart;
 
 const FeaturedWrapper = styled.div`
   margin-top: 30px;
+  @media screen and (max-width: 1024px) {
+    margin-top: 20px;
+  }
 `;
 
 const MintCardGroup = styled.div`
@@ -41,4 +44,13 @@ const MintCardGroup = styled.div`
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 1.25rem;
   margin-top: 32px;
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media screen and (max-width: 640px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media screen and (max-width: 425px) {
+    grid-template-columns: 1fr;
+  }
 `;

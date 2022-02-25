@@ -8,6 +8,10 @@ export const SidebarWrapper = styled.div`
   background-color: rgb(18, 18, 23);
   top: 0;
   left: 0;
+  transition: all 0.3s;
+  @media screen and (max-width: 768px) {
+    left: -388px;
+  }
 `;
 
 export const SideMenuWrapper = styled.div`

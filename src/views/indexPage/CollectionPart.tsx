@@ -1,75 +1,76 @@
 import PageTitle from "components/PageTitle";
 import React from "react";
 import styled from "styled-components";
-
-import MintImg1 from "assets/image/mint1.jpg";
-import ProtocolSvg from "assets/image/near-protocol-logo.svg";
 import TableBadge from "components/TableBadge";
+
+import ProtocolSvg from "assets/image/near-protocol-logo.svg";
 import { CollectionTableData } from "utils/data";
 
 const CollectionPart = () => {
   return (
     <CollectionWrapper>
       <PageTitle>All Collections</PageTitle>
-      <CollectionTable>
-        <thead>
-          <tr>
-            <th>#</th>
-            <th className="text-left">COLLECTION</th>
-            <th>FLOOR PRICE</th>
-            <th>OWNERS</th>
-            <th>
-              SALES
-              <TableBadge label="24h" />
-            </th>
-            <th>
-              VOLUME
-              <TableBadge label="24h" />
-            </th>
-            <th>MARKET CAP</th>
-          </tr>
-        </thead>
-        <tbody>
-          {CollectionTableData.map((item: any, key: any) => (
+      <TableWrapper>
+        <CollectionTable>
+          <thead>
             <tr>
-              <td>{key + 1}</td>
-              <td>
-                {" "}
-                <div className="collection-td">
-                  <img src={item.img} alt={item.img} />
-                  <div>
-                    <h2>{item.title}</h2>
-                    <p>
-                      <span>Supply: </span>
-                      {item.count}
-                    </p>
-                  </div>
-                </div>
-              </td>
-              <td>
-                <div className="price-td">
-                  <img src={ProtocolSvg} alt="ProtocolSvg" />
-                  {item.price}
-                </div>
-              </td>
-              <td>{item.owner}</td>
-              <td>
-                {item.sales.count}
-                <span className={`highlight-text ${item.sales.type}`}>
-                  {`(${item.sales.revenue})`}
-                </span>
-              </td>
-              <td>
-                {item.volume.cost}
-                <span
-                  className={`highlight-text ${item.volume.type}`}
-                >{`(${item.volume.revenue})`}</span>
-              </td>
-              <td>{item.marketCap}</td>
+              <th>#</th>
+              <th className="text-left">COLLECTION</th>
+              <th>FLOOR PRICE</th>
+              <th>OWNERS</th>
+              <th>
+                SALES
+                <TableBadge label="24h" />
+              </th>
+              <th>
+                VOLUME
+                <TableBadge label="24h" />
+              </th>
+              <th>MARKET CAP</th>
             </tr>
-          ))}
-        </tbody>
-      </CollectionTable>
+          </thead>
+          <tbody>
+            {CollectionTableData.map((item: any, key: any) => (
+              <tr key={key}>
+                <td>{key + 1}</td>
+                <td>
+                  {" "}
+                  <div className="collection-td">
+                    <img src={item.img} alt={item.img} />
+                    <div>
+                      <h2>{item.title}</h2>
+                      <p>
+                        <span>Supply: </span>
+                        {item.count}
+                      </p>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div className="price-td">
+                    <img src={ProtocolSvg} alt="ProtocolSvg" />
+                    {item.price}
+                  </div>
+                </td>
+                <td>{item.owner}</td>
+                <td>
+                  {item.sales.count}
+                  <span className={`highlight-text ${item.sales.type}`}>
+                    {`(${item.sales.revenue})`}
+                  </span>
+                </td>
+                <td>
+                  {item.volume.cost}
+                  <span
+                    className={`highlight-text ${item.volume.type}`}
+                  >{`(${item.volume.revenue})`}</span>
+                </td>
+                <td>{item.marketCap}</td>
+              </tr>
+            ))}
+          </tbody>
+        </CollectionTable>
+      </TableWrapper>
     </CollectionWrapper>
   );
 };
@@ -78,6 +79,14 @@ export default CollectionPart;
 
 const CollectionWrapper = styled.div`
   margin-top: 5rem;
+  @media screen and (max-width: 640px) {
+    margin-top: 2.5rem;
+  }
+`;
+
+const TableWrapper = styled.div`
+  overflow-x: scroll;
+  width: 100%;
 `;
 
 const CollectionTable = styled.table`
@@ -89,6 +98,7 @@ const CollectionTable = styled.table`
   .text-left {
     text-align: left;
   }
+  white-space: nowrap;
   tr {
     border-top: 1px solid #2a2d3e;
   }

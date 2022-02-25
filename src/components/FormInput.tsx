@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 const InputWrapper = styled.div`
   width: -webkit-fill-available;
-  max-width: 400px;
   input {
     width: -webkit-fill-available;
     line-height: 1.75rem;

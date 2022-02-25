@@ -4,28 +4,37 @@ import styled from "styled-components";
 
 import LightModeSvg from "assets/image/light_mode.svg";
 
+import IntroImg from "assets/image/intro.gif";
+import IntroSMImg from "assets/image/intro-sm.gif";
+
 const Header = () => {
   return (
-    <HeaderWrapper>
-      <FormInput />
-      <StatBar>
-        <StatWrapper>
-          <StatItem>
-            <h2>2</h2>
-            <p>Collections</p>
-          </StatItem>
-          <StatItem>
-            <h2>6632</h2>
-            <p>Sales</p>
-          </StatItem>
-          <StatItem>
-            <h2>431.49k</h2>
-            <p>Volume</p>
-          </StatItem>
-        </StatWrapper>
-        <img src={LightModeSvg} alt="LightModeSvg" />
-      </StatBar>
-    </HeaderWrapper>
+    <>
+      <HeaderWrapper>
+        <FormWrapper>
+          <FormInput />
+        </FormWrapper>
+        <StatBar>
+          <StatWrapper>
+            <StatItem>
+              <h2>2</h2>
+              <p>Collections</p>
+            </StatItem>
+            <StatItem>
+              <h2>6632</h2>
+              <p>Sales</p>
+            </StatItem>
+            <StatItem>
+              <h2>431.49k</h2>
+              <p>Volume</p>
+            </StatItem>
+          </StatWrapper>
+          <img src={LightModeSvg} alt="LightModeSvg" />
+        </StatBar>
+      </HeaderWrapper>
+      <IntroGif src={IntroImg} alt="IntroImg" />
+      <IntroGifSM src={IntroSMImg} alt="IntroImg" />
+    </>
   );
 };
 
@@ -36,6 +45,18 @@ const HeaderWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+`;
+
+const FormWrapper = styled.div`
+  width: 100%;
+  max-width: 400px;
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
 `;
 
 const StatWrapper = styled.div`
@@ -74,10 +95,34 @@ const StatItem = styled.div`
 const StatBar = styled.div`
   display: inline-flex;
   width: -webkit-fill-available;
-  justify-content: flex-end;
+
   align-items: center;
   img {
     margin: 0 32px;
     cursor: pointer;
+  }
+  @media screen and (max-width: 1024px) {
+    margin-top: 20px;
+    justify-content: flex-start;
+  }
+`;
+
+export const IntroGif = styled.img`
+  width: 100%;
+  margin-top: 20px;
+  display: none;
+  @media screen and (max-width: 1024px) {
+    display: block;
+  }
+  @media screen and (max-width: 400px) {
+    display: none;
+  }
+`;
+export const IntroGifSM = styled.img`
+  width: 100%;
+  margin-top: 20px;
+  display: none;
+  @media screen and (max-width: 400px) {
+    display: block;
   }
 `;
