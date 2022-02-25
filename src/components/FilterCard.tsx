@@ -24,6 +24,11 @@ const FilterCard = (props: any) => {
 export default FilterCard;
 
 const CardWrapper = styled.div`
+  :active {
+    transform: scale(1.03);
+  }
+  transition: all 0.2s;
+  cursor: pointer;
   background-color: #121217;
   border-radius: 0.5rem;
   width: 100%;

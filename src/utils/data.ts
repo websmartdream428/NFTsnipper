@@ -79,3 +79,8 @@ export const FilterCardData = [
   { img: MintImg4, rank: 6, no: 631 },
   { img: MintImg1, rank: 7, no: 676 },
 ];
+
+export const SortSelectData = [
+  { label: "Rarity Rank", value: "rarity" },
+  { label: "Price", value: "price" },
+];

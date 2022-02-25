@@ -6,3 +6,4 @@ export { default as FormInput } from "./FormInput";
 export { default as MintCard } from "./MintCard";
 export { default as PageTitle } from "./PageTitle";
 export { default as TableBadge } from "./TableBadge";
+export { default as CustomSelect } from "./CustomSelect";
