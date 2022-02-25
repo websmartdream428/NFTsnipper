@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 import MintImg1 from "assets/image/mint1.jpg";
 import ProtocolSvg from "assets/image/near-protocol-logo.svg";
+import TableBadge from "components/TableBadge";
 
 const CollectionPart = () => {
   return (
@@ -16,8 +17,14 @@ const CollectionPart = () => {
             <th className="text-left">COLLECTION</th>
             <th>FLOOR PRICE</th>
             <th>OWNERS</th>
-            <th>SALES</th>
-            <th>VOLUME</th>
+            <th>
+              SALES
+              <TableBadge label="24h" />
+            </th>
+            <th>
+              VOLUME
+              <TableBadge label="24h" />
+            </th>
             <th>MARKET CAP</th>
           </tr>
         </thead>
