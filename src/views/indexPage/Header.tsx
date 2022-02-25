@@ -1,11 +1,11 @@
-import FormInput from "components/FormInput";
 import React from "react";
 import styled from "styled-components";
 
+import FormInput from "components/FormInput";
 import LightModeSvg from "assets/image/light_mode.svg";
 
-import IntroImg from "assets/image/intro.gif";
-import IntroSMImg from "assets/image/intro-sm.gif";
+// import IntroImg from "assets/image/intro.gif";
+// import IntroSMImg from "assets/image/intro-sm.gif";
 
 const Header = () => {
   return (
@@ -32,8 +32,8 @@ const Header = () => {
           <img src={LightModeSvg} alt="LightModeSvg" />
         </StatBar>
       </HeaderWrapper>
-      <IntroGif src={IntroImg} alt="IntroImg" />
-      <IntroGifSM src={IntroSMImg} alt="IntroImg" />
+      {/* <IntroGif src={IntroImg} alt="IntroImg" />
+      <IntroGifSM src={IntroSMImg} alt="IntroImg" /> */}
     </>
   );
 };
