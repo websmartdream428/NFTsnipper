@@ -1,5 +1,5 @@
 import React from "react";
-import { FeaturedPart, Header } from "views/indexPage";
+import { CollectionPart, FeaturedPart, Header } from "views/indexPage";
 import { IndexWrapper } from "./Index.styles";
 
 const IndexPage = () => {
@@ -7,6 +7,7 @@ const IndexPage = () => {
     <IndexWrapper>
       <Header />
       <FeaturedPart />
+      <CollectionPart />
     </IndexWrapper>
   );
 };

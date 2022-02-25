@@ -31,6 +31,10 @@ export default MintCard;
 const CardWrapper = styled.div`
   border-radius: 0.5rem;
   background-color: #121217;
+  transition: all 0.2s;
+  :hover {
+    transform: translateY(-7px);
+  }
 `;
 
 const ImgWrapper = styled.div`
