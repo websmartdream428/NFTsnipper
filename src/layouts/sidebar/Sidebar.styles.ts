@@ -17,15 +17,23 @@ export const SideMenuWrapper = styled.div`
   }
 `;
 
-export const MenuItem = styled.div`
+export const MenuItem = styled.div<{ active?: boolean }>`
+  cursor: pointer;
+  :hover {
+    color: #d77e7e80;
+  }
+  transition: all 0.3s;
   text-transform: uppercase;
   font-size: 1rem;
   line-height: 1.5rem;
   position: relative;
+  color: ${({ active }) => (active ? "#d77e7e" : "#fff")};
+  ${({ active }) => active && "font-weight: 500"};
   ::before {
     content: " ";
     background-color: white;
     height: 1px;
+    opacity: ${({ active }) => (active ? "1" : "0")};
     width: 20px;
     position: absolute;
     top: 50%;

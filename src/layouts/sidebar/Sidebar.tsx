@@ -15,7 +15,7 @@ const Sidebar = () => {
     <SidebarWrapper>
       <LogoImg />
       <SideMenuWrapper>
-        <MenuItem>{"Home"}</MenuItem>
+        <MenuItem active={true}>{"Home"}</MenuItem>
         <MenuItem>{"Upcoming drops"}</MenuItem>
         <MenuItem>{"Services & ADS"}</MenuItem>
       </SideMenuWrapper>
