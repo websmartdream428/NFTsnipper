@@ -95,7 +95,7 @@ const StatItem = styled.div`
 const StatBar = styled.div`
   display: inline-flex;
   width: -webkit-fill-available;
-
+  justify-content: flex-end;
   align-items: center;
   img {
     margin: 0 32px;
