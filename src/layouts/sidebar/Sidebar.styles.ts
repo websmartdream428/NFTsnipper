@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SidebarWrapper = styled.div`
+export const SidebarWrapper = styled.div<{ active: boolean }>`
   position: fixed;
   width: 240px;
   height: 100vh;
@@ -9,8 +9,37 @@ export const SidebarWrapper = styled.div`
   top: 0;
   left: 0;
   transition: all 0.3s;
+  .close {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-weight: 700;
+    cursor: pointer;
+  }
   @media screen and (max-width: 768px) {
-    left: -388px;
+    left: ${({ active }) => (active ? "0" : "-388px")};
+    z-index: 99999;
+    .close {
+      display: inline-block;
+    }
+  }
+`;
+
+export const SidebarOverLay = styled.div<{ active: boolean }>`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000b0;
+  z-index: 999;
+  display: none;
+  transition: all 0.3s;
+  @media screen and (max-width: 768px) {
+    display: block;
+    opacity: ${({ active }) => (active ? "1" : "0")};
+    visibility: ${({ active }) => (active ? "visible" : "hidden")};
   }
 `;
 
